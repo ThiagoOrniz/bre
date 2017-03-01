@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 chooseImageDetail();
-
             }
 
             @Override

@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(){
 
+        DatabaseReference mDatabase;
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
             Toast.makeText(this, "Please, type a valid email.", Toast.LENGTH_SHORT).show();
             return;
@@ -77,6 +79,8 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Please, type a valid password.", Toast.LENGTH_SHORT).show();
             return;
         }
+
+      
 
         startActivity(new Intent(this,MainActivity.class));
     }
